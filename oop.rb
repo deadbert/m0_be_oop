@@ -65,3 +65,28 @@ end
 #  it should have an is_adult attribute (boolean) that is false by default. once a Hobbit is 33, it should be an adult
 #  it should have an is_old attribute that defaults to false. once a Hobbit is 101, it is old.
 #  it should have a has_ring attribute. If the Hobbit's name is "Frodo", true, if not, false.
+class Hobbit
+    attr_reader :name, :disposition, :age, :is_adult, :is_old, :has_ring
+
+    def initialize(name, disposition, age = 0)
+        @name = name
+        @disposition = disposition
+        @age = age
+        @is_adult = false
+        @is_old = false
+        if @name == "Frodo"
+            @has_ring = true
+        else
+            @has_ring = false
+        end
+    end
+
+    def celebrate_birthday
+        @age += 1
+        if age > 32 && age < 100
+            @is_adult = true
+        elsif age > 100
+            @is_old = true
+        end
+    end
+end
