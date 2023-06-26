@@ -13,6 +13,11 @@ class Unicorn
         "*~* #{phrase} *~*"
     end
 end
+
+lily = Unicorn.new("Lily")
+
+p lily.color
+p lily.say("I'm the coolest unicorn around")
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
@@ -31,6 +36,14 @@ class Vampire
     end
 end
 
+steve = Vampire.new("Steve")
+vamp_with_cat = Vampire.new("Vamp", "cat")
+
+p steve.name, steve.pet, steve.thirsty
+p vamp_with_cat.pet
+
+steve.drink
+p steve.thirsty
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
