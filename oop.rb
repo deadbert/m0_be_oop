@@ -75,12 +75,13 @@ class Dragon
     end
 end
 
-greg = Dragon.new("Greg", "Lily", "Pink")
-puts greg.name
-puts greg.rider
-puts greg.color
+# dragon class test cases
+# greg = Dragon.new("Greg", "Lily", "Pink")
+# puts greg.name
+# puts greg.rider
+# puts greg.color
 
-puts greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry
+# puts greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
@@ -99,11 +100,6 @@ class Hobbit
         @age = age
         @is_adult = false
         @is_old = false
-        if @name == "Frodo"
-            @has_ring = true
-        else
-            @has_ring = false
-        end
     end
 
     def celebrate_birthday
@@ -114,4 +110,30 @@ class Hobbit
             @is_old = true
         end
     end
+
+    def has_ring?
+        if name == "Frodo"
+            return @has_ring = true
+        else
+            false
+        end
+    end     
 end
+
+# frodo = Hobbit.new("Frodo", "Sad")
+# p frodo.name
+# p frodo.disposition
+# p "Has ring? #{frodo.has_ring?}"
+
+# 33.times do
+#     frodo.celebrate_birthday
+# end
+# p "age: #{frodo.age}"
+# p "is adult? #{frodo.is_adult}"
+# p "is old? #{frodo.is_old}"
+
+# 68.times do
+#     frodo.celebrate_birthday
+# end
+# p "age: #{frodo.age}"
+# p "is old? #{frodo.is_old}"
