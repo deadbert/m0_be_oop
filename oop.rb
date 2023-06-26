@@ -14,10 +14,12 @@ class Unicorn
     end
 end
 
-lily = Unicorn.new("Lily")
+# test cases for Unicorn class
+# lily = Unicorn.new("Lily")
 
-p lily.color
-p lily.say("I'm the coolest unicorn around")
+# p lily.color
+# p lily.say("I'm the coolest unicorn around")
+
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
 #  it should have a pet attribute, that is a bat, by default BUT it could be dynamic if info is passed in initially
@@ -36,14 +38,17 @@ class Vampire
     end
 end
 
-steve = Vampire.new("Steve")
-vamp_with_cat = Vampire.new("Vamp", "cat")
+# tests cases for vampire class
+# steve = Vampire.new("Steve")
+# vamp_with_cat = Vampire.new("Vamp", "cat")
 
-p steve.name, steve.pet, steve.thirsty
-p vamp_with_cat.pet
+# p steve.name, steve.pet, steve.thirsty
+# p vamp_with_cat.pet
 
-steve.drink
-p steve.thirsty
+# steve.drink
+# p steve.thirsty
+
+
 #  Write a Dragon class
 #  it should have a dynamic name attribute (string)
 #  it should have a dynamic rider attribute (string)
@@ -69,6 +74,13 @@ class Dragon
         end
     end
 end
+
+greg = Dragon.new("Greg", "Lily", "Pink")
+puts greg.name
+puts greg.rider
+puts greg.color
+
+puts greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
