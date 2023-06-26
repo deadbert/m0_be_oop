@@ -124,6 +124,7 @@ class Hobbit
     end     
 end
 
+# Hobbit class test cases
 frodo = Hobbit.new("Frodo", "Sad")
 p frodo.name
 p frodo.disposition
