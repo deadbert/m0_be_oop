@@ -15,10 +15,10 @@ class Unicorn
 end
 
 # test cases for Unicorn class
-# lily = Unicorn.new("Lily")
+lily = Unicorn.new("Lily")
 
-# p lily.color
-# p lily.say("I'm the coolest unicorn around")
+p "name: #{lily.color}"
+p lily.say("I'm the coolest unicorn around")
 
 #  Write a class called Vampire
 #  it should have a dynamic name attribute
@@ -39,14 +39,14 @@ class Vampire
 end
 
 # tests cases for vampire class
-# steve = Vampire.new("Steve")
-# vamp_with_cat = Vampire.new("Vamp", "cat")
+steve = Vampire.new("Steve")
+vamp_with_cat = Vampire.new("Vamp", "cat")
 
-# p steve.name, steve.pet, steve.thirsty
-# p vamp_with_cat.pet
+p "name: #{steve.name}, pet: #{steve.pet}, thirsty? #{steve.thirsty}"
+p "vamp with new pet: #{vamp_with_cat.pet}"
 
-# steve.drink
-# p steve.thirsty
+steve.drink
+p "thirsty after drink? #{steve.thirsty}"
 
 
 #  Write a Dragon class
@@ -76,12 +76,16 @@ class Dragon
 end
 
 # dragon class test cases
-# greg = Dragon.new("Greg", "Lily", "Pink")
-# puts greg.name
-# puts greg.rider
-# puts greg.color
-
-# puts greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry, greg.eat, greg.is_hungry
+greg = Dragon.new("Greg", "Lily", "Pink")
+puts "dragon name: #{greg.name}"
+puts "dragon rider: #{greg.rider}"
+puts "dragon color: #{greg.color}"
+puts "is hungry?: #{greg.is_hungry}"
+4.times do
+    puts "Hungry? #{greg.is_hungry}"
+    greg.eat
+end
+puts "Hungry after 4 eats? #{greg.is_hungry}"
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
@@ -120,20 +124,20 @@ class Hobbit
     end     
 end
 
-# frodo = Hobbit.new("Frodo", "Sad")
-# p frodo.name
-# p frodo.disposition
-# p "Has ring? #{frodo.has_ring?}"
+frodo = Hobbit.new("Frodo", "Sad")
+p frodo.name
+p frodo.disposition
+p "Has ring? #{frodo.has_ring?}"
 
-# 33.times do
-#     frodo.celebrate_birthday
-# end
-# p "age: #{frodo.age}"
-# p "is adult? #{frodo.is_adult}"
-# p "is old? #{frodo.is_old}"
+33.times do
+    frodo.celebrate_birthday
+end
+p "age: #{frodo.age}"
+p "is adult? #{frodo.is_adult}"
+p "is old? #{frodo.is_old}"
 
-# 68.times do
-#     frodo.celebrate_birthday
-# end
-# p "age: #{frodo.age}"
-# p "is old? #{frodo.is_old}"
+68.times do
+    frodo.celebrate_birthday
+end
+p "age: #{frodo.age}"
+p "is old? #{frodo.is_old}"
